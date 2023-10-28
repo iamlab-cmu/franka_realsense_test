@@ -14,20 +14,24 @@
     ```
     rqt_image_view
     ```
-4. Start Frankapy as usual.
+4. Rostopic echo the camera_info and make sure the config/realsense.intr file matches the output (The first number in K is fx, the third number in K is cx, the fifth number in K in fy, and the 6th number in K is cy).
+    ```
+    rostopic echo /camera/color/camera_info
+    ```
+5. Start Frankapy as usual.
     ```
     cd Prog/frankapy
     ./bash_scripts/start_control_pc.sh -u student -i iam-<robot_name>
     ```
-5. Enter the virtual environment and enter this folder.
+6. Enter the virtual environment and enter this folder.
     ```
     senv
     cd ~/franka_realsense_test
     ```
-6. Run the example script with a wooden block on the table.
+7. Run the example script with a wooden block on the table.
     ```
     python scripts/pick_up_using_realsense.py
     ```
-7. Click on the center of the block in the image that pops up and then press enter.
-8. The robot should go pick up the top of the block.
+8. Click on the center of the block in the image that pops up and then press enter.
+9. The robot should go pick up the top of the block.
 
